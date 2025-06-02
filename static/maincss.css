@@ -15,9 +15,9 @@ a {
   vertical-align:middle;
 }
 #nav-1{
-  padding-top:30px;
+  padding-top:0px;
   padding-right:0px;
-  padding-bottom:50px;
+  padding-bottom:48px;
   padding-left:0px;
   width:100%;
   margin-top:0px;
@@ -259,36 +259,100 @@ p{
   cursor: grab;
 }
 
-.map-container img {
+.map-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transform-origin: center center;
+}
+
+.map-wrapper img {
+  display: block;
   max-width: none;
   user-select: none;
+  pointer-events: none;
+}
+
+.overlay-layer {
+  position: absolute;
+  inset: 0;
   pointer-events: none;
 }
 
 .hotspot {
   position: absolute;
   transform: translate(-50%, -100%);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.marker {
+  width: 33px;
+  height: 33px;
+  
+  background-size: contain;
   cursor: pointer;
 }
 
+.hotspot[data-type="photo"] .marker {
+  background-image: url('../assets/ico/photo.png');
+}
+
+.hotspot[data-type="item"] .marker {
+  background-image: url("../assets/ico/item.png");
+}
+
+.hotspot[data-type="blackhole"] .marker {
+  background-image: url("../assets/ico/blackhole.png");
+}
+
+.hotspot[data-type="collect"] .marker {
+  background-image: url("../assets/ico/collect.png");
+}
+
 .popup {
-  background: rgba(255,255,255,0.9);
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 8px;
-  width: 160px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  font-size: 14px;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+.popup-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+.popup-paragraph {
+  flex: 2;
+  margin-right: 10px;
+}
+
+.popup-paragraph:last-child {
+  flex: 1;
+  margin-right: 0;
 }
 
 .popup img {
   width: 100%;
   height: auto;
   border-radius: 4px;
-  margin-bottom: 5px;
+}
+
+.hotspot.active {
+  z-index: 9999;
+}
+
+.hotspot.active .popup {
+  display: block;
 }
