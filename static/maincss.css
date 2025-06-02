@@ -295,6 +295,10 @@ p{
   cursor: pointer;
 }
 
+.hotspot[data-type="photoboard"] .marker {
+  background-image: url('../assets/ico/photoboard.png');
+}
+
 .hotspot[data-type="photo"] .marker {
   background-image: url('../assets/ico/photo.png');
 }
