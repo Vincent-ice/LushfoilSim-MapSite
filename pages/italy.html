@@ -10,51 +10,24 @@
 
 <body>
 
-  <header id="nav-1" role="banner">
-    <div class="container">
-      <div class="header-inner">
-        <h1>
-          <a href="../index.html">
-            <div id="title" class="c3149">Lushfoil Photography Sim 地图</div>
-          </a>
-        </h1>
-      </div>
-      <nav role="navigation" class="c2266">
-        <ul id="ipsh">
-          <li>
-            <a href="../index.html">首页</a>
-          </li>
-          <li>
-            <a href="./italy.html" class="active">意大利</a>
-          </li>
-          <li>
-            <a href="https://htmlpage.cn/download">澳大利亚</a>
-          </li>
-          <li>
-            <a href="https://htmlpage.cn/help">大社</a>
-          </li>
-          <li>
-            <a href="https://htmlpage.cn/help">冰岛</a>
-          </li>
-          <li>
-            <a href="https://htmlpage.cn/help">法国</a>
-          </li>
-          <li>
-            <a href="https://htmlpage.cn/help">尼泊尔</a>
-          </li>
-          <li>
-            <a href="https://htmlpage.cn/help">山寺</a>
-          </li>
-          <li>
-            <a href="https://htmlpage.cn/help">英国</a>
-          </li>
-          <li>
-            <a href="https://htmlpage.cn/help">中国</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<div id="navbar-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById("navbar-container").innerHTML = data;
+                  
+                  const currentPageId = "italy"; // 当前页面的 id，例如 "home"
+                    const activeLink = document.getElementById(currentPageId);
+
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
+                  })
+                .catch(error => console.error("导航栏加载失败:", error));
+        });
+    </script>
 
 <div class="map-container" id="mapContainer">
 <div class="map-wrapper" id="mapWrapper">
@@ -418,18 +391,17 @@
 </div>
 </div>
 
-  <section class="footer-1">
-    <div class="container">
-      <div class="media-container-row align-center">
-        <div class="col-12">
-          <p class="mbr-text">
-            © Copyright 2025 
-            <a href="https://github.com/Vincent-ice" target="_blank">Vincent-ice</a> - All Rights Reserved
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div id="footer-container"></div>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-container").innerHTML = data;
+                })
+                .catch(error => console.error("底栏加载失败:", error));
+        });
+    </script>
 
 <script src="../static/dragimg.js"></script>
 </body>
