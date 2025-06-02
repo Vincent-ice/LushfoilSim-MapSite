@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fushimi Inari Shrine - Japan LushfoilSim地图</title>
+  <link rel="stylesheet" type="text/css" href="../static/maincss.css">
+ <link rel="icon" href="../assets/favicon.webp">
+</head>
+
+<body>
+
+<div id="navbar-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById("navbar-container").innerHTML = data;
+                  
+                  const currentPageId = "da-she"; // 当前页面的 id，例如 "home"
+                    const activeLink = document.getElementById(currentPageId);
+
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
+                  })
+                .catch(error => console.error("导航栏加载失败:", error));
+        });
+    </script>
+
+<div class="map-container" id="mapContainer">
+<div class="map-wrapper" id="mapWrapper">
+  <img src="../assets/map/dashe.webp" id="mapImage" alt="map">
+</div>
+
+<div calss="overlay-layer" id="overlayLayer">
+
+<div class="hotspot" data-left="82.88" data-top="23.87" data-type="photo"></div>
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p1.jpg" alt="铃铛">
+    <div class="popup-content">
+      <p class="popup-paragraph">两排中靠地图边缘的那一条</p>
+      <div class="popup-paragraph">
+        <p>02.73N 25.01E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="82.1" data-top="53.38" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p2.jpg" alt="路">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>03.80N 24.44E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="56.85" data-top="19.91" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p3.jpg" alt="湖">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>03.34N 26.22E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="24.15" data-top="72.36" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p4.jpg" alt="雕像">
+    <div class="popup-content">
+      <p class="popup-paragraph">雨天黑洞所在地</p>
+      <div class="popup-paragraph">
+        <p>05.48N 27.27E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="69.55" data-top="80.22" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p5.jpg" alt="塔">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>04.92N 24.82E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="49.35" data-top="64.71" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p6.jpg" alt="信箱">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>04.85N 26.38E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="43.38" data-top="6.98" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p7.jpg" alt="远眺">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>03.49N 27.08E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="57.7" data-top="74.67" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p8.jpg" alt="竹林">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>05.14N 25.50E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="70.88" data-top="37.24" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p9.jpg" alt="出生点">
+    <div class="popup-content">
+      <p class="popup-paragraph">出生点</p>
+      <div class="popup-paragraph">
+        <p>03.42N 25.28E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="85.28" data-top="35.6" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p10.jpg" alt="远处">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>03.19N 24.64E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="34.02" data-top="12.53" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p11.jpg" alt="图腾">
+    <div class="popup-content">
+      <p class="popup-paragraph">这个图腾要解锁照片板后才能拿</p>
+      <div class="popup-paragraph">
+        <p>03.88N 27.25E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="82.47" data-top="76.13" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/p12.jpg" alt="塔">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>04.44N 24.10E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="54.73" data-top="67.78" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/pb1.jpg" alt="雨天">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>04.87N 25.84E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="81.73" data-top="50.98" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/pb2.jpg" alt="晴天">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>03.70N 24.61E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="41.25" data-top="8.09" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c1.jpg" alt="纸飞机">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>03.56N 27.07E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="75.25" data-top="87.47" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c2.jpg" alt="数码">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>04.83N 24.60E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="83.67" data-top="42.49" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c3.jpg" alt="胶片">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>03.44N 24.65E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="78.62" data-top="60.0" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c4.jpg" alt="无人机">
+    <div class="popup-content">
+      <p class="popup-paragraph">石碑后方 需要全图腾收集</p>
+      <div class="popup-paragraph">
+        <p>04.11N 24.74E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="62.65" data-top="57.2" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c5.jpg" alt="雨伞">
+    <div class="popup-content">
+      <p class="popup-paragraph">有很多个</p>
+      <div class="popup-paragraph">
+        <p>04.30N 25.58E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="60.75" data-top="71.07" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c6.jpg" alt="dv">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>04.83N 25.49E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="85.5" data-top="50.31" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c7.jpg" alt="雨伞">
+    <div class="popup-content">
+      <p class="popup-paragraph">有很多个</p>
+      <div class="popup-paragraph">
+        <p>03.55N 24.42E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="75.1" data-top="17.91" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c8.jpg" alt="雨伞">
+    <div class="popup-content">
+      <p class="popup-paragraph">有很多个</p>
+      <div class="popup-paragraph">
+        <p>02.88N 25.43E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="68.25" data-top="81.87" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/c9.jpg" alt="雨伞">
+    <div class="popup-content">
+      <p class="popup-paragraph">有很多个</p>
+      <div class="popup-paragraph">
+        <p>04.95N 24.89E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="61.48" data-top="12.44" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">在绿色的湖旁边小路</p>
+      <div class="popup-paragraph">
+        <p>03.10N 26.25E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="34.27" data-top="16.44" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i2.jpg" alt="2">
+    <div class="popup-content">
+      <p class="popup-paragraph">山顶庙前</p>
+      <div class="popup-paragraph">
+        <p>03.98N 27.20E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="82.67" data-top="77.64" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph">小镇庙前</p>
+      <div class="popup-paragraph">
+        <p>04.54N 24.07E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="49.25" data-top="13.33" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph">湖到远眺点之间的转折处</p>
+      <div class="popup-paragraph">
+        <p>03.54N 26.71E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="82.65" data-top="33.82" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i5.jpg" alt="5">
+    <div class="popup-content">
+      <p class="popup-paragraph">草坪大致中间的地方</p>
+      <div class="popup-paragraph">
+        <p>03.11N 24.73E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="75.02" data-top="7.07" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i6.jpg" alt="6">
+    <div class="popup-content">
+      <p class="popup-paragraph">在门口</p>
+      <div class="popup-paragraph">
+        <p>02.37N 25.58E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="57.3" data-top="46.76" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i7.jpg" alt="7">
+    <div class="popup-content">
+      <p class="popup-paragraph">溪流的路边</p>
+      <div class="popup-paragraph">
+        <p>04.14N 25.95E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="65.62" data-top="37.78" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i8.jpg" alt="8">
+    <div class="popup-content">
+      <p class="popup-paragraph">出生点右前方的树叶地里</p>
+      <div class="popup-paragraph">
+        <p>03.60N 25.55E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="31.0" data-top="11.6" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/i9.jpg" alt="9">
+    <div class="popup-content">
+      <p class="popup-paragraph">完成雨天照片板后可收集</p>
+      <div class="popup-paragraph">
+        <p>03.90N 27.35E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="22.93" data-top="72.13" data-type="blackhole">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/dashe/b.jpg" alt="黑洞">
+    <div class="popup-content">
+      <p class="popup-paragraph">雕像照片处</p>
+      <div class="popup-paragraph">
+        <p>05.48N 27.27E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div id="footer-container"></div>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-container").innerHTML = data;
+                })
+                .catch(error => console.error("底栏加载失败:", error));
+        });
+    </script>
+
+<script src="../static/dragimg.js"></script>
+</body>
+
+
+</html>

@@ -2,7 +2,7 @@ import csv
 import os
 from PIL import Image
 
-place = 'italy'
+place = 'dashe'
 # 导入图片并获取其分辨率
 image_path = './assets/map/'+place+'.webp'  # 替换为你的图片路径
 with Image.open(image_path) as img:
@@ -17,16 +17,26 @@ def to_percent(value, total):
 
 html_snippets = []
 
+# 转换
+type_mapping = {
+    'p': 'photo',
+    'pb': 'photoboard',
+    'i': 'item',
+    'c': 'collect',
+    'b': 'blackhole'
+}
+
 with open(CSV_PATH, newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         x = int(row['x'])
         y = int(row['y'])
-        type_ = row['type']
+        type_ = type_mapping.get(row['type'], row['type'])
         title = row['title']
-        image = row['image']
+        image = row['type']+row['image']+'.jpg'
         content = row['content']
-        position = row['position']
+        longitude = row['longitude']+'E'
+        latitude = row['latitude']+'N'
         where = row['where']
 
         percent_x = to_percent(x, IMAGE_WIDTH)
@@ -40,7 +50,7 @@ with open(CSV_PATH, newline='', encoding='utf-8') as csvfile:
     <div class="popup-content">
       <p class="popup-paragraph">{content}</p>
       <div class="popup-paragraph">
-        <p>{position}</p>
+        <p>{latitude} {longitude}</p>
         <p>{where}</p>
       </div>
     </div>

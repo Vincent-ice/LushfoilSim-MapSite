@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Castle Rock Beach - Australia LushfoilSim地图</title>
+  <link rel="stylesheet" type="text/css" href="../static/maincss.css">
+ <link rel="icon" href="../assets/favicon.webp">
+</head>
+
+<body>
+
+<div id="navbar-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById("navbar-container").innerHTML = data;
+                  
+                  const currentPageId = "australia"; // 当前页面的 id，例如 "home"
+                    const activeLink = document.getElementById(currentPageId);
+
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
+                  })
+                .catch(error => console.error("导航栏加载失败:", error));
+        });
+    </script>
+
+<div class="map-container" id="mapContainer">
+<div class="map-wrapper" id="mapWrapper">
+  <img src="../assets/map/Australia.webp" id="mapImage" alt="map">
+</div>
+
+<div calss="overlay-layer" id="overlayLayer">
+
+<div class="hotspot" data-left="37.97" data-top="68.36" data-type="photo"></div>
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p1.jpg" alt="出生点">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.36S 51.57E</p>
+        <p>白天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="26.92" data-top="92.27" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p2.jpg" alt="岩石上">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>56.85S 51.10E</p>
+        <p>白天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="47.67" data-top="77.73" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p3.jpg" alt="栏杆">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.07S 52.09E</p>
+        <p>白天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="65.6" data-top="68.67" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p4.jpg" alt="栏杆">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.22S 52.88E</p>
+        <p>白天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="13.4" data-top="81.24" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p5.jpg" alt="火堆">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.28S 50.30E</p>
+        <p>白天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="26.27" data-top="79.42" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p6.jpg" alt="路牌">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.16S 51.07E</p>
+        <p>白天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="31.55" data-top="25.16" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p7.jpg" alt="路标">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>58.44S 51.62E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="87.15" data-top="74.49" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p8.jpg" alt="帐篷">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>56.80S 53.95E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="31.47" data-top="83.91" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/p9.jpg" alt="沙滩">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.02S 51.31E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="24.77" data-top="72.04" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/pb1.jpg" alt="白天">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.38S 51.05E</p>
+        <p>白天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="9.38" data-top="78.58" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/pb2.jpg" alt="夕阳">
+    <div class="popup-content">
+      <p class="popup-paragraph">完成后回到此处进入第三场景-火灾</p>
+      <div class="popup-paragraph">
+        <p>57.27S 50.30E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="85.88" data-top="77.29" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c1.jpg" alt="冲浪板">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>56.76S 53.73E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="68.88" data-top="70.62" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c2.jpg" alt="DV">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.21S 52.93E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="42.9" data-top="28.44" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c3.jpg" alt="数码相机">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>58.27S 52.14E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="87.62" data-top="76.84" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c4.jpg" alt="无人机">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>56.80S 53.95E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="21.02" data-top="61.24" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c5.jpg" alt="胶片">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.67S 51.00E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="15.38" data-top="77.91" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c6.jpg" alt="手电">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.49S 52.31E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="64.68" data-top="80.09" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c7.jpg" alt="手电">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.03S 52.45E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="12.68" data-top="84.27" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c8.jpg" alt="无人机">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.14S 50.40E</p>
+        <p>夕阳</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="27.92" data-top="93.27" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/c9.jpg" alt="GPS">
+    <div class="popup-content">
+      <p class="popup-paragraph">GPS是找东西最重要的东西</p>
+      <div class="popup-paragraph">
+        <p>56.85S 51.10E</p>
+        <p>火灾</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="31.15" data-top="70.58" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/i1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.34S 51.31E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="30.58" data-top="88.8" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/i2.jpg" alt="2">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>56.92S 51.22E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="13.83" data-top="85.33" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/i3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.09S 50.45E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="46.85" data-top="77.16" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/i4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.04S 52.04E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="27.62" data-top="48.8" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/i5.jpg" alt="5">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>57.64S 51.10E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="84.95" data-top="74.49" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/i6.jpg" alt="6">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>56.93S 53.76E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="94.53" data-top="72.4" data-type="blackhole">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/australia/b.jpg" alt="黑洞">
+    <div class="popup-content">
+      <p class="popup-paragraph">需要全图腾收集</p>
+      <div class="popup-paragraph">
+        <p>56.88S 54.33E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div id="footer-container"></div>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-container").innerHTML = data;
+                })
+                .catch(error => console.error("底栏加载失败:", error));
+        });
+    </script>
+
+<script src="../static/dragimg.js"></script>
+</body>
+
+
+</html>
