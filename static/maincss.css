@@ -290,7 +290,7 @@ p{
 .marker {
   width: 33px;
   height: 33px;
-  
+  background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
@@ -313,6 +313,10 @@ p{
 
 .hotspot[data-type="collect"] .marker {
   background-image: url("../assets/ico/collect.png");
+}
+
+.hotspot[data-type="portal"] .marker {
+  background-image: url("../assets/ico/portal.png");
 }
 
 .popup {
