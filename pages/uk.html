@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>East Maddon Park - UK LushfoilSim地图</title>
+  <link rel="stylesheet" type="text/css" href="../static/maincss.css">
+ <link rel="icon" href="../assets/favicon.webp">
+</head>
+
+<body>
+
+<div id="navbar-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById("navbar-container").innerHTML = data;
+                  
+                  const currentPageId = "uk"; // 当前页面的 id，例如 "home"
+                    const activeLink = document.getElementById(currentPageId);
+
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
+                  })
+                .catch(error => console.error("导航栏加载失败:", error));
+        });
+    </script>
+
+<div class="map-container" id="mapContainer">
+<div class="map-wrapper" id="mapWrapper">
+  <img src="../assets/map/uk.webp" id="mapImage" alt="map">
+</div>
+
+<div calss="overlay-layer" id="overlayLayer">
+
+<div class="hotspot" data-left="55.36" data-top="69.72" data-type="item"></div>
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/i1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">在岛上需要船;或者是晴天照片板奖励</p>
+      <div class="popup-paragraph">
+        <p>46.41N 61.04E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="92.3" data-top="71.32" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/i2.jpg" alt="2">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>46.54N 58.11E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="66.12" data-top="63.13" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/i3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>45.75N 60.16E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="37.2" data-top="72.49" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/i4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>46.65N 62.55E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="30.16" data-top="73.37" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/i5.jpg" alt="5">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>46.74N 63.14E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="29.26" data-top="86.88" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/i6.jpg" alt="6">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>48.07N 63.30E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="38.73" data-top="58.03" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/pb1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">木质亭子中都有照片板</p>
+      <div class="popup-paragraph">
+        <p>45.22N 62.35E</p>
+        <p>晴天/雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="60.79" data-top="67.85" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/pb1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">木质亭子中都有照片板</p>
+      <div class="popup-paragraph">
+        <p>46.22N 60.61E</p>
+        <p>晴天/雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="41.65" data-top="68.18" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/pb1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">木质亭子中都有照片板</p>
+      <div class="popup-paragraph">
+        <p>46.26N 62.17E</p>
+        <p>晴天/雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="62.88" data-top="53.68" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/pb1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">木质亭子中都有照片板</p>
+      <div class="popup-paragraph">
+        <p>44.83N 60.46E</p>
+        <p>晴天/雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="77.92" data-top="54.74" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/pb1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">木质亭子中都有照片板</p>
+      <div class="popup-paragraph">
+        <p>44.91N 59.19E</p>
+        <p>晴天/雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="58.96" data-top="50.82" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/pb1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">木质亭子中都有照片板</p>
+      <div class="popup-paragraph">
+        <p>44.47N 60.82E</p>
+        <p>晴天/雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="23.19" data-top="17.83" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/pb1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">木质亭子中都有照片板</p>
+      <div class="popup-paragraph">
+        <p>41.03N 63.59E</p>
+        <p>晴天/雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="72.34" data-top="16.94" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/pb1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">木质亭子中都有照片板</p>
+      <div class="popup-paragraph">
+        <p>40.97N 59.56E</p>
+        <p>晴天/雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="42.96" data-top="34.07" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/p1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>42.33N 62.05E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="59.85" data-top="44.53" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/p2.jpg" alt="2">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>43.84N 60.62E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="28.8" data-top="26.12" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/p3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph">篮球场之一</p>
+      <div class="popup-paragraph">
+        <p>41.88N 63.00E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="17.93" data-top="89.23" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/p3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph">篮球场之二</p>
+      <div class="popup-paragraph">
+        <p>48.23N 64.55E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="40.01" data-top="86.82" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/p4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>48.13N 62.28E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="39.71" data-top="67.85" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>46.16N 62.34E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="55.8" data-top="54.64" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>44.74N 61.04E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="38.65" data-top="62.31" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>45.60N 62.42E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="53.23" data-top="48.63" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>44.21N 61.23E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="21.95" data-top="49.48" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>44.23N 63.74E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="57.56" data-top="82.38" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>47.73N 60.96E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="51.09" data-top="52.38" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>44.65N 61.42E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="32.65" data-top="52.0" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>44.52N 62.87E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="72.76" data-top="46.38" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c2.jpg" alt="2">
+    <div class="popup-content">
+      <p class="popup-paragraph">无人机为雨天照片板奖励</p>
+      <div class="popup-paragraph">
+        <p>N E</p>
+        <p>雨天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="40.67" data-top="65.48" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>46.00N 59.18E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="79.31" data-top="43.24" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>43.67N 59.05E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="61.76" data-top="31.98" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>42.48N 60.48E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="70.19" data-top="75.35" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>47.06N 59.82E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="40.05" data-top="67.42" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>46.16N 62.34E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="26.9" data-top="68.69" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>46.22N 63.35E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="50.56" data-top="66.54" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>46.08N 61.48E</p>
+        <p>晴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="36.68" data-top="46.05" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>43.91N 62.63E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="65.91" data-top="51.91" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>44.63N 60.25E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="66.25" data-top="33.99" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>42.72N 60.14E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="46.14" data-top="53.21" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/uk/c4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>44.65N 61.80E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-container"></div>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-container").innerHTML = data;
+                })
+                .catch(error => console.error("底栏加载失败:", error));
+        });
+    </script>
+
+<script src="../static/dragimg.js"></script>
+</body>
+
+
+</html>
