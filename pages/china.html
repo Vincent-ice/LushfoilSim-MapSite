@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Castle Rock Beach - Australia LushfoilSim地图</title>
+  <link rel="stylesheet" type="text/css" href="../static/maincss.css">
+ <link rel="icon" href="../assets/favicon.webp">
+</head>
+
+<body>
+
+<div id="navbar-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById("navbar-container").innerHTML = data;
+                  
+                  const currentPageId = "china"; // 当前页面的 id，例如 "home"
+                    const activeLink = document.getElementById(currentPageId);
+
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
+                  })
+                .catch(error => console.error("导航栏加载失败:", error));
+        });
+    </script>
+
+<div class="map-container" id="mapContainer">
+<div class="map-wrapper" id="mapWrapper">
+  <img src="../assets/map/china.webp" id="mapImage" alt="map">
+</div>
+
+<div calss="overlay-layer" id="overlayLayer">
+
+<div class="hotspot" data-left="96.69" data-top="47.73" data-type="blackhole">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/b.jpg" alt="黑洞">
+    <div class="popup-content">
+      <p class="popup-paragraph">需要照片全收集</p>
+      <div class="popup-paragraph">
+        <p>31.84N 45.67E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="60.93" data-top="89.21" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/pb1.jpg" alt="照片板">
+    <div class="popup-content">
+      <p class="popup-paragraph">此处左手边为奖励解锁的门</p>
+      <div class="popup-paragraph">
+        <p>31.92N 42.03E</p>
+        <p>阴天</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="55.79" data-top="44.06" data-type="photoboard">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/pb2.jpg" alt="照片板">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>33.89N 42.89E</p>
+        <p>黄昏</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="58.26" data-top="94.06" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/p1.jpg" alt="缺口">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>31.67N 41.70E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="42.92" data-top="69.58" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/p2.jpg" alt="洞口">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>33.54N 41.32E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="50.86" data-top="85.81" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/p3.jpg" alt="窗口">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>32.30N 41.38E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="4.63" data-top="17.41" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/p4.jpg" alt="国旗">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>36.27N 40.85E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="41.01" data-top="54.22" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/p5.jpg" alt="门框">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.20N 41.70E</p>
+        <p>None</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="31.47" data-top="94.79" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/p6.jpg" alt="沙滩">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>32.87N 39.73E</p>
+        <p>黄昏</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="36.8" data-top="82.09" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/p7.jpg" alt="平台">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>33.17N 40.52E</p>
+        <p>黄昏</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="32.23" data-top="63.92" data-type="photo">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/p8.jpg" alt="窗口">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.21N 40.90E</p>
+        <p>黄昏</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="32.62" data-top="62.69" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/c1.jpg" alt="提灯">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.20N 40.88E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="37.28" data-top="85.72" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/c2.jpg" alt="纸飞机">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>33.01N 40.48E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="23.09" data-top="60.34" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/c3.jpg" alt="胶片">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.75N 40.51E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="50.18" data-top="71.99" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/c4.jpg" alt="dv">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>33.00N 41.79E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="5.02" data-top="19.72" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/c5.jpg" alt="无人机">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>36.25N 40.91E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="31.5" data-top="62.56" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/c6.jpg" alt="数码相机">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.30N 40.88E</p>
+        <p>黄昏</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="57.34" data-top="93.47" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/c7.jpg" alt="提灯">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>31.62N 41.67E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="24.12" data-top="60.38" data-type="collect">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/c8.jpg" alt="提灯">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.64N 40.53E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="42.61" data-top="68.81" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/i1.jpg" alt="1">
+    <div class="popup-content">
+      <p class="popup-paragraph">在山洞里</p>
+      <div class="popup-paragraph">
+        <p>33.60N 41.33E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="44.68" data-top="52.22" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/i2.jpg" alt="2">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.13N 41.98E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="48.39" data-top="79.37" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/i3.jpg" alt="3">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>33.13N 40.82E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="45.81" data-top="42.48" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/i4.jpg" alt="4">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.46N 42.31E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="51.0" data-top="73.75" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/i5.jpg" alt="5">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>32.85N 41.73E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="50.77" data-top="85.13" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/i6.jpg" alt="6">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>32.30N 41.35E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hotspot" data-left="69.99" data-top="17.36" data-type="item">
+  <div class="marker"></div>
+  <div class="popup">
+    <img src="../assets/photo/china/i7.jpg" alt="7">
+    <div class="popup-content">
+      <p class="popup-paragraph"></p>
+      <div class="popup-paragraph">
+        <p>34.34N 44.39E</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div id="footer-container"></div>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-container").innerHTML = data;
+                })
+                .catch(error => console.error("底栏加载失败:", error));
+        });
+    </script>
+
+<script src="../static/dragimg.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLD9YXKQP8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VLD9YXKQP8');
+</script>
+
+</body>
+
+
+</html>
